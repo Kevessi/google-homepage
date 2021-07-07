@@ -1,1 +1,147 @@
+body {
+  background-color: white;
+  position: relative;
+  min-height: 100vh;
+}
 
+.navbar-container {
+  top: 0%;
+  background-color: transparent;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  /*flex-direction: row;*/
+  justify-content: flex-end;
+  align-items: center;
+
+  /*always use flex-end for justify and alighn when talking aboit
+  far left and far right
+  align-items: center;*/
+}
+/*.nav-bar-content-1 no need for a content1 since we don't have
+more than 1 block of code which goes int own section
+  height: inherit;
+  /*height: 100%;
+  width: 100%;
+  display: flex;
+justify-content: space-between;* that won't work either because it
+will space in the whole container/ 
+ margin: 5px will give a margin to the container not each item*/
+
+.a-content {
+  margin-right: 10px; /*best way to make some space between each
+  content*/
+}
+
+a:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.profile-pic {
+  height: inherit; /* easiest way to make something fit inside of another
+  div*/
+  height: 50%;
+  border-radius: 50%;
+}
+
+.profile-pic:hover {
+  box-shadow: 0px 0px 1px 2px rgba(192, 192, 192, 0.9);
+}
+.application_logo:hover {
+  box-shadow: 0px 0px 1px 2px rgba(192, 192, 192, 0.9);
+}
+
+main {
+  background-color: pink;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.google-image {
+  position: relative;
+  bottom: 70px;
+}
+.btn {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  bottom: 25px;
+
+  /*it will originally just fit it the buttons only
+  but we set the widht to be 100% so we should be good*/
+}
+.btn1 {
+  position: relative;
+  height: 30px;
+  width: 140px;
+  right: 20px;
+  /*not using margin because it would push the other box*/
+}
+.btn2 {
+  position: relative;
+
+  width: 140px;
+  left: 20px;
+  /*not using margin because it would push the other box*/
+}
+
+.searchbar {
+  position: relative;
+  bottom: 50px;
+  height: 40px;
+  width: 450px;
+  border-radius: 25px;
+}
+.searchbar:hover {
+  box-shadow: 0px 0px 2px 2px rgba(192, 192, 192, 0.9);
+}
+.btn1 .btn2:hover {
+  box-shadow: 0px 0px 2px 2px rgba(192, 192, 192, 0.9);
+}
+
+.a-text-lang {
+  position: relative;
+  left: 4px;
+}
+footer {
+  background-color: orange;
+  height: 70px;
+  background-color: gray;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  bottom: 0px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ 
+
+
+}
+.footer-1 {
+  height: inherit;
+  width: 50%;
+  background: yellow;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+}
+.footer-2 {
+  height: inherit;
+  background: green;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+  flex-wrap: wrap;
+ 
+}
