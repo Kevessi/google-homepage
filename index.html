@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <!--html reads from top to down
+    therefore you must put the reset css before your css, also always pick a good reset some others
+  are not that good to be frank-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
     <header>
@@ -14,15 +17,18 @@
         <!--<div class="nav-bar-content-1"> no need-->
         <a class="a-content" target="_blank" href="#">Gmails</a>
         <a class="a-content" target="_blank" href="#">images</a>
-        <img class="application_logo a-content"
-        src="/home/kevin/Desktop/Projects/the_odin_project/google-homepage/outline_apps_black_24dp.png"
-        alt="applogo"" />
+        <a class="image-container"
+          ><img class="application_logo a-content"
+          src="https://lh3.googleusercontent.com/proxy/ZXG0J-tP2FEjutKlqkQI1s848RjHGkzF-snYbqN3ggKReSiGOMtR7vcE9u_MkfO09GwWEWpLSBcq--sQuHHJWn9nNEVmE9_iNiNNVmiNmZ-9L4i3Kwb2bqqt"
+          alt="applogo"" /></a
+        >
 
-        <img
-          class="profile-pic a-content"
-          src="https://i.stack.imgur.com/34AD2.jpg"
-          alt="profilePic"
-        />
+        <a class="image-container"
+          ><img
+            class="profile-pic a-content"
+            src="https://i.stack.imgur.com/34AD2.jpg"
+            alt="profilePic"
+        /></a>
       </nav>
     </header>
 

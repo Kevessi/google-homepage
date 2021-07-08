@@ -38,11 +38,17 @@ a:hover {
   opacity: 0.9;
 }
 
+.image-container {
+  height: 50%; /* easiest way to make something fit inside of another
+  div no need to use height inherit since it's direct parent already have
+  this height*/
+}
 .profile-pic {
-  height: inherit; /* easiest way to make something fit inside of another
-  div*/
-  height: 50%;
+  height: 100%; /*fills in the anchor image-container*/
   border-radius: 50%;
+}
+.application_logo {
+  height: 100%;
 }
 
 .profile-pic:hover {
@@ -116,12 +122,9 @@ footer {
   bottom: 0px;
   width: 100%;
   bottom: 0px;
- display: flex;
- flex-wrap: wrap;
- justify-content: space-between;
- 
-
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .footer-1 {
   height: inherit;
@@ -132,7 +135,6 @@ footer {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  
 }
 .footer-2 {
   height: inherit;
@@ -143,5 +145,4 @@ footer {
   justify-content: space-evenly;
   width: 50%;
   flex-wrap: wrap;
- 
 }
