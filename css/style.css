@@ -1,7 +1,13 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   background-color: white;
   position: relative;
+  /* don't add a height or it will mess up min-height*/
   min-height: 100vh;
+  font-size: 11px;
 }
 
 .navbar-container {
@@ -46,9 +52,13 @@ a:hover {
 .profile-pic {
   height: 100%; /*fills in the anchor image-container*/
   border-radius: 50%;
+  position: relative;
+  
 }
 .application_logo {
   height: 100%;
+  position: relative;
+  top: 0px;
 }
 
 .profile-pic:hover {
@@ -59,7 +69,7 @@ a:hover {
 }
 
 main {
-  background-color: pink;
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -86,27 +96,71 @@ main {
   height: 30px;
   width: 140px;
   right: 20px;
+  border-width: 0px; /*so there is no border visible*/
   /*not using margin because it would push the other box*/
 }
 .btn2 {
   position: relative;
-
   width: 140px;
   left: 20px;
+  border-width: 0px; /*so there is no border visible*/
   /*not using margin because it would push the other box*/
 }
 
-.searchbar {
+.searchbar-wrapp {
   position: relative;
-  bottom: 50px;
-  height: 40px;
-  width: 450px;
-  border-radius: 25px;
+  bottom: 60px;
+  height: 38px;
+  width: 500px;
+  border: rgb(242, 242, 242) solid 2px; /* 2px is the width of the borders and 1px is too small
+  we put a less visible color so that we have the illusion taht the border is smaller than 1px.*/
+  border-radius: 20px;
+  display: flex;
 }
-.searchbar:hover {
+.searchbar-search-image {
+  position: absolute;
+  height: 45%;
+  top: 50%;
+  left: 18px;
+  transform: translate(-50%, -50%);
+}
+
+#searchbar-audio-image {
+  position: absolute;
+  right: 0px;
+  height: 60%;
+  width: 22px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /*for some god saken reason, changin this to id ill fix the shakiness lol*/
+}
+
+#audio-image {
+  height: 100%;
+  width: 100%;
+  /*for some god saken reason, changin this to id ill fix the shakiness lol*/
+}
+
+.searchbar {
+  position: absolute;
+  outline: none;
+  top: 0px;
+  left: 30px;
+  height: 90%;
+  width: 85%;
+  border-width: 0px;
+  align-self: center;
+}
+
+.searchbar-wrapp:hover {
   box-shadow: 0px 0px 2px 2px rgba(192, 192, 192, 0.9);
 }
-.btn1 .btn2:hover {
+.btn1:hover {
+  box-shadow: 0px 0px 2px 2px rgba(192, 192, 192, 0.9);
+}
+
+.btn2:hover{
   box-shadow: 0px 0px 2px 2px rgba(192, 192, 192, 0.9);
 }
 
@@ -115,34 +169,42 @@ main {
   left: 4px;
 }
 footer {
-  background-color: orange;
-  height: 70px;
-  background-color: gray;
+  /*footer2 seems to be going below footer1 when media gets activated*/
+  display: flex;
+  height: 40px;
   position: absolute;
-  bottom: 0px;
   width: 100%;
   bottom: 0px;
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color: rgb(242, 242, 242);
 }
 .footer-1 {
+  font-size: 12px;
   height: inherit;
-  width: 50%;
-  background: yellow;
+  /*don't set a width, kinda dumb to do tha*/
   display: flex;
+  width: 50%;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .footer-2 {
+  font-size: 12px;
+  width: 50%;
+
   height: inherit;
-  background: green;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  width: 50%;
   flex-wrap: wrap;
+}
+
+@media (max-width: 650px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
